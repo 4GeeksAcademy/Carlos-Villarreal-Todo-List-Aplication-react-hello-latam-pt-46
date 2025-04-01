@@ -10,9 +10,15 @@ import '../styles/index.css'
 
 // components
 import App from './components/App';
+import TodoInput from './components/TodoInput';
+import TodoItem from './components/Todo Item';
+import TodoList from './components/TodoList';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App/>
+    <TodoItem/>
+    <TodoInput/>
+    <TodoList/>
   </React.StrictMode>,
 )

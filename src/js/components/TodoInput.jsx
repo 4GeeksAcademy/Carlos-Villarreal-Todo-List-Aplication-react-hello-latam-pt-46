@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const TodoInput = ({ addTask }) => {
-    const [inputValue, setInputValue] = useState('');
-
+const TodoInput = ({ inputValue, setInputValue, addTask }) => {
     const handleKeyPress = (event) => {
         if (event.key === 'Enter' && inputValue) {
             addTask(inputValue);
-            setInputValue('');
         }
     };
 
