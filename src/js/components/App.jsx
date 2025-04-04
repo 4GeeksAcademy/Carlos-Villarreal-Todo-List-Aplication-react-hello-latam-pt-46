@@ -1,26 +1,57 @@
 import React, { useState } from 'react';
-import TodoList from './TodoList';
-import TodoInput from './TodoInput';
+
+import TodoList from './components/TodoList';
+
 
 const App = () => {
-    const [tasks, setTasks] = useState([]);
 
-    const addTask = (task) => {
-        setTasks([...tasks, { id: Date.now(), text: task }]);
-    };
+  const [tasks, setTasks] = useState([]);
 
-    const removeTask = (id) => {
-        setTasks(tasks.filter(task => task.id !== id));
-    };
+  const [inputValue, setInputValue] = useState('');
 
-    return (
-        <div>
-            <h1>Lista de TODO</h1>
-            <TodoInput addTask={addTask} />
-            <TodoList tasks={tasks} removeTask={removeTask} />
-            {tasks.length === 0 && <p>No hay tareas, añadir tareas</p>}
-        </div>
-    );
+
+  const handleKeyPress = (event) => {
+
+    if (event.key === 'Enter' && inputValue.trim() !== '') {
+
+      setTasks([...tasks, inputValue]);
+
+      setInputValue('');
+
+    }
+
+  };
+
+
+  return (
+
+    <div className="app">
+
+      <h1>Lista de Tareas</h1>
+
+      <input
+
+        type="text"
+
+        value={inputValue}
+
+        onChange={(e) => setInputValue(e.target.value)}
+
+        onKeyPress={handleKeyPress}
+
+        placeholder="Agregar tarea..."
+
+      />
+
+      <TodoList tasks={tasks} setTasks={setTasks} />
+
+      {tasks.length === 0 && <p>No hay tareas, añadir tareas</p>}
+
+    </div>
+
+  );
+
 };
+
 
 export default App;
