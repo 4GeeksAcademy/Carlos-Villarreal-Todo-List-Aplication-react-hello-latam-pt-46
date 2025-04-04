@@ -11,7 +11,7 @@ import '../styles/index.css'
 // components
 import App from './components/App';
 import TodoInput from './components/TodoInput';
-import TodoItem from './components/Todo Item';
+import TodoItem from './components/TodoItem';
 import TodoList from './components/TodoList';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
