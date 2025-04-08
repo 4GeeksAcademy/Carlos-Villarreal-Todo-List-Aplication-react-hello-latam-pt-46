@@ -9,16 +9,10 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import App from './components/App';
-import TodoInput from './components/TodoInput';
-import TodoItem from './components/TodoItem';
-import TodoList from './components/TodoList';
+import Home from './components/Home';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App/>
-    <TodoInput/>
-    <TodoItem/>
-    <TodoList/>
+    <Home/>
   </React.StrictMode>,
 )
