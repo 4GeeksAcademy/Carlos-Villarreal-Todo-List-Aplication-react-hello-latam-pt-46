@@ -17,8 +17,8 @@ import TodoList from './components/TodoList';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App/>
-    <TodoItem/>
     <TodoInput/>
+    <TodoItem/>
     <TodoList/>
   </React.StrictMode>,
 )

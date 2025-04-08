@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 
 import TodoList from './components/TodoList';
 
-
 const App = () => {
 
   const [tasks, setTasks] = useState([]);
 
   const [inputValue, setInputValue] = useState('');
-
 
   const handleKeyPress = (event) => {
 
