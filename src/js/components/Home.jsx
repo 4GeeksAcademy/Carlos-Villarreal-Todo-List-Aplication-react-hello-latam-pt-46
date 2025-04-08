@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
-import { TodoList } from "./ListOfTask";
+import { ListOfTask } from "./ListOfTask";
 import { Input } from "./Input";
 
 const Home = () => {
