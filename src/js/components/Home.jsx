@@ -132,7 +132,7 @@ const Home = () => {
 	}
 
 	const addFirstHomework = todo.length === 0
-		? <li id="firstHomework" className="ps-5">Add your first homework</li>
+		? <li id="firstHomework" className="ps-5">Añade tu primera tarea</li>
 		: null;
 
 	useEffect(() => {
@@ -142,7 +142,7 @@ const Home = () => {
 	return (
 		<div className="container w-50">
 			<div id="row" className="row d-flex jutify-content-center ">
-				<h2 className="d-flex justify-content-center" >TARE LIST</h2>
+				<h2 className="d-flex justify-content-center" >TODO LIST</h2>
 				<ul className="d-flex flex-column justify-content-center">
 
 					<Input
