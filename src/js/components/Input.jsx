@@ -10,7 +10,7 @@ export const Input = (props) => {
                 className="ps-5"
                 type="text"
                 id="myInput"
-                placeholder="what needs to be done?"
+                placeholder="What needs to be done?"
                 value={currentInput}
                 onChange={handleChange}
                 onKeyDown={keyPress}
